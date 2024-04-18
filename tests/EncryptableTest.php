@@ -50,4 +50,15 @@ class EncryptableTest extends TestCase
         $this->assertEquals($name, $user->name);
         $this->assertEquals($email, $user->email);
     }
+
+    #[Test]
+    public function wont_encrypt_null_value_columns()
+    {
+        $user = User::factory()->create([
+            'name' => null,
+            'email' => $email = fake()->email,
+        ]);
+
+        $this->assertEquals(null, $user->name);
+    }
 }
