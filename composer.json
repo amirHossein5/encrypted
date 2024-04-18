@@ -1,0 +1,17 @@
+{
+    "name": "amir/encryptable",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "Amir\\Encryptable\\": "src/",
+            "Amir\\Encryptable\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^11.4",
+        "illuminate/support": "^11.4"
+    }
+}
