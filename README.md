@@ -14,3 +14,5 @@ class User extends Authenticatable
     protected $encrypt = ['name', 'email'];
 }
 ```
+
+It'll encrypt when model saves(update, create), and decrypts when retrieving model.
