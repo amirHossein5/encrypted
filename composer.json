@@ -5,7 +5,11 @@
     "version": "0.0.1",
     "autoload": {
         "psr-4": {
-            "Amir\\Encryptable\\": "src/",
+            "Amir\\Encryptable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Amir\\Encryptable\\Tests\\": "tests/"
         }
     },
