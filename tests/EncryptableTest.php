@@ -4,6 +4,7 @@ namespace Amir\Encryptable\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\Attributes\Test;
 use Workbench\App\Models\User;
 
@@ -14,10 +15,12 @@ class EncryptableTest extends TestCase
     #[Test]
     public function encrypts_data_on_create()
     {
-        $user = User::create([
+        User::create([
             'name' => $name = fake()->name,
             'email' => $email = fake()->email,
         ]);
+
+        $user = DB::table('users')->first();
 
         $this->assertEquals($name, Crypt::decrypt($user->name));
         $this->assertEquals($email, Crypt::decrypt($user->email));
@@ -33,8 +36,10 @@ class EncryptableTest extends TestCase
             'email' => $newEmail = fake()->email,
         ]);
 
-        $this->assertEquals($newName, Crypt::decrypt($user->name));
-        $this->assertEquals($newEmail, Crypt::decrypt($user->email));
+        $newUser = DB::table('users')->first();
+
+        $this->assertEquals($newName, Crypt::decrypt($newUser->name));
+        $this->assertEquals($newEmail, Crypt::decrypt($newUser->email));
     }
 
     #[Test]
@@ -54,10 +59,12 @@ class EncryptableTest extends TestCase
     #[Test]
     public function wont_encrypt_null_value_columns()
     {
-        $user = User::factory()->create([
+        User::factory()->create([
             'name' => null,
             'email' => $email = fake()->email,
         ]);
+
+        $user = DB::table('users')->first();
 
         $this->assertEquals(null, $user->name);
     }
