@@ -29,9 +29,7 @@ class EncryptableTest extends TestCase
     #[Test]
     public function encrypts_data_on_update()
     {
-        $user = User::factory()->create();
-
-        $user->update([
+        User::factory()->create()->update([
             'name' => $newName = fake()->name,
             'email' => $newEmail = fake()->email,
         ]);
