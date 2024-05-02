@@ -1,4 +1,4 @@
-A laravel eloquent cast to encrypt/decrypt data.
+A laravel's eloquent cast to encrypt/decrypt data.
 
 ## Installation
 
