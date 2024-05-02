@@ -1,18 +1,21 @@
 ## Usage
 
-Add `\Amir\Encryptable\Encryptable` trait to your model, and define encryptable properties:
+Use `\Amir\Encryptable\Encrypted` cast inside your model:
 
 ```php
 <?php
 
-use Amir\Encryptable\Encryptable;
+use Amir\Encryptable\Encrypted;
 
 class User extends Authenticatable
 {
-    use Encryptable;
+    // ...
 
-    protected $encrypt = ['name', 'email'];
+    protected $casts = [
+        'name' => Encrypted::class,
+        'email' => Encrypted::class,
+    ];
 }
 ```
 
-It'll encrypt when model saves(update, create), and decrypts when retrieving model.
+It'll encrypt and decrypt based on APP_KEY using laravel's Crypt facade

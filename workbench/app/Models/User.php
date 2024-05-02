@@ -2,17 +2,20 @@
 
 namespace Workbench\App\Models;
 
-use Amir\Encryptable\Encryptable;
+use Amir\Encryptable\Encrypted;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    use HasFactory, Encryptable;
-
-    protected $encrypt = ['name', 'email'];
+    use HasFactory;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'name' => Encrypted::class,
+        'email' => Encrypted::class,
+    ];
 
     protected static function newFactory()
     {
