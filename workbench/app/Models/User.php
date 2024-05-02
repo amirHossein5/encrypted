@@ -2,7 +2,7 @@
 
 namespace Workbench\App\Models;
 
-use Amir\Encryptable\Encrypted;
+use AmirHossein5\Encrypted\Encrypted;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

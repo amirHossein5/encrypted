@@ -1,6 +1,6 @@
 <?php
 
-namespace Amir\Encryptable;
+namespace AmirHossein5\Encrypted;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Database\Eloquent\Model;

@@ -1,15 +1,15 @@
 {
-    "name": "amir/encryptable",
+    "name": "amirhossein5/encrypted",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Amir\\Encryptable\\": "src/"
+            "AmirHossein5\\Encrypted\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Amir\\Encryptable\\Tests\\": "tests/",
+            "AmirHossein5\\Encrypted\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/",
             "Workbench\\Database\\Factories\\": "workbench/database/factories/",
             "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"

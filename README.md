@@ -1,11 +1,11 @@
 ## Usage
 
-Use `\Amir\Encryptable\Encrypted` cast inside your model:
+Use `\AmirHossein5\Encrypted\Encrypted` cast inside your model:
 
 ```php
 <?php
 
-use Amir\Encryptable\Encrypted;
+use AmirHossein5\Encrypted\Encrypted;
 
 class User extends Authenticatable
 {

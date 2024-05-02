@@ -1,6 +1,6 @@
 <?php
 
-namespace Amir\Encryptable\Tests;
+namespace AmirHossein5\Encrypted\Tests;
 
 use Orchestra\Testbench\Concerns\WithWorkbench;
 

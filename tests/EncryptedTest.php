@@ -1,6 +1,6 @@
 <?php
 
-namespace Amir\Encryptable\Tests;
+namespace AmirHossein5\Encrypted\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Crypt;
